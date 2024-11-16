@@ -124,7 +124,7 @@ Explicação:
 
 - Calcula o montante após 10 anos de juros compostos a uma taxa de 5% ao ano.
 
-Cálculo:
+Fórmula:
 
 - Juros Compostos: $$ A = P \times \left( 1 + \frac{r}{100} \right)^n $$
 
@@ -132,9 +132,15 @@ Cálculo:
 - \(r\): taxa de juros
 - \(n\): número de períodos
 
+Cálculo:
+
+$$
+A = 10000 \times (1 + 0.05)^{10} \approx 16288
+$$
+
 Explicação:
 
-Calcula o montante após 10 anos de juros compostos a uma taxa de 5% ao ano.
+- Calcula o montante após 10 anos de juros compostos a uma taxa de 5% ao ano.
 
 Saída Esperada: `16288`
 
@@ -159,8 +165,9 @@ if (revenue > cost) {
 ```
 
 Fórmula:
-	•	Lucro: result = revenue - cost
-	•	Prejuízo: result = cost - revenue
+
+- Lucro: result = revenue - cost
+- Prejuízo: result = cost - revenue
 
 Explicação:
 
@@ -172,7 +179,7 @@ Saída Esperada:
 
 ---
 
-Teste 4: Simulação de Múltiplas Rodadas de Investimento
+### Teste 4: Simulação de Múltiplas Rodadas de Investimento
 
 Código:
 ```plaintext
@@ -198,19 +205,21 @@ Explicação:
 
 - Simula 5 rodadas de investimento, onde cada rodada aumenta o valor investido. Imprime o investimento total após cada rodada.
 
-Saída Esperada:
-
-100000
+Saída Esperada: 
+- `100000 
 300000
 600000
 1000000
 1500000
-1500000
+1500000`
+
+--- 
 
 Teste 5: Cálculo de Sinergias em uma Fusão
 
 Código:
 
+```plaintext
 account companyARevenue = 500000;
 account companyBRevenue = 300000;
 account expectedSynergy = 200000;
@@ -218,22 +227,26 @@ account mergedRevenue;
 
 mergedRevenue = companyARevenue + companyBRevenue + expectedSynergy;
 print(mergedRevenue);
+```
 
 Fórmula:
-	•	Receita Combinada: mergedRevenue = companyARevenue + companyBRevenue + expectedSynergy
+
+- Receita Combinada: mergedRevenue = companyARevenue + companyBRevenue + expectedSynergy
 
 Explicação:
 
-Calcula a receita total após a fusão de duas empresas, incluindo as sinergias esperadas.
+- Calcula a receita total após a fusão de duas empresas, incluindo as sinergias esperadas.
 
-Saída Esperada:
+Saída Esperada
 
-1000000
+- `1000000`
 
-Teste 6: Transferência de Fundos entre Contas
+---
+
+### Teste 6: Transferência de Fundos entre Contas
 
 Código:
-
+```plaintext
 account accountA = 1000000;
 account accountB = 500000;
 account transferAmount = 200000;
@@ -247,77 +260,90 @@ if (accountA >= transferAmount) {
 } else {
     print(0);  // Transferência falhou por fundos insuficientes
 }
+```
 
 Fórmula:
-	•	Saldo após Transferência:
-	•	accountA = accountA - transferAmount
-	•	accountB = accountB + transferAmount
+- Saldo após Transferência:
+- accountA = accountA - transferAmount
+- accountB = accountB + transferAmount
 
 Explicação:
 
-Verifica se há fundos suficientes em accountA para a transferência e atualiza os saldos de ambas as contas.
+- Verifica se há fundos suficientes em accountA para a transferência e atualiza os saldos de ambas as contas.
 
 Saída Esperada:
 
-800000
-700000
+- `800000
+700000`
 
-Teste 7: Cálculo de Retorno sobre Investimento (ROI)
+---
+
+### Teste 7: Cálculo de Retorno sobre Investimento (ROI)
 
 Código:
-
+```plaintext
 account gainFromInvestment = 150000;
 account costOfInvestment = 100000;
 
 account roi;
 roi = (gainFromInvestment - costOfInvestment) * 100 / costOfInvestment;
 print(roi);
+```
 
 Fórmula:
-	•	ROI (%): ￼
+
+$
+\text{ROI} = \left( \frac{\text{Ganho} - \text{Custo}}{\text{Custo}} \right) \times 100 
+$
 
 Explicação:
 
-Calcula o retorno percentual sobre um investimento dado o ganho e o custo.
+- Calcula o retorno percentual sobre um investimento dado o ganho e o custo.
 
 Saída Esperada:
 
-50
+- `50`
 
-Teste 8: Depreciação de Ativo ao Longo do Tempo
+---
+
+### Teste 8: Depreciação de Ativo ao Longo do Tempo
 
 Código:
-
+```plaintext
 account assetValue = 500000;
 account depreciationRate = 10;  // Percentual ao ano
 account years = 5;
 account i = 0;
+
 
 while (i < years) {
     assetValue = assetValue - (assetValue * depreciationRate / 100);
     i = i + 1;
     print(assetValue);
 }
+```
 
 Fórmula:
-	•	Depreciação Anual: assetValue = assetValue - (assetValue * depreciationRate / 100)
+- Depreciação Anual: assetValue = assetValue - (assetValue * depreciationRate / 100)
 
 Explicação:
 
-Simula a depreciação de um ativo ao longo de 5 anos a uma taxa anual de 10%.
+- Simula a depreciação de um ativo ao longo de 5 anos a uma taxa anual de 10%.
 
 Saída Esperada:
 
-450000
+- `450000
 405000
 364500
 328050
-295245
+295245`
 
-Teste 9: Análise do Ponto de Equilíbrio
+---
+
+### Teste 9: Análise do Ponto de Equilíbrio
 
 Código:
-
+```plaintext
 account fixedCosts = 100000;
 account variableCostPerUnit = 50;
 account pricePerUnit = 100;
@@ -327,26 +353,34 @@ while ((pricePerUnit * units) < (fixedCosts + variableCostPerUnit * units)) {
     units = units + 1;
 }
 print(units);
+```
 
-Fórmula:
-	•	Ponto de Equilíbrio (Unidades): ￼
+Fórmula:￼
+
+$
+\text{Unidades} = \frac{\text{Custos Fixos}}{\text{Preço por Unidade} - \text{Custo Variável por Unidade}} 
+$
 
 Explicação:
 
-Calcula o número de unidades que devem ser vendidas para cobrir todos os custos, atingindo o ponto de equilíbrio.
+- Calcula o número de unidades que devem ser vendidas para cobrir todos os custos, atingindo o ponto de equilíbrio.
 
 Cálculo:
 
-￼
+$
+\text{Unidades} = \frac{100000}{100 - 50} = 2000 
+$
 
 Saída Esperada:
 
-2000
+- `2000`
 
-Teste 10: Crescimento de Portfólio de Ações com Reinvestimento
+---
+
+### Teste 10: Crescimento de Portfólio de Ações com Reinvestimento
 
 Código:
-
+```plaintext
 account portfolioValue = 100000;
 account annualReturnRate = 7;  // Percentual ao ano
 account years = 10;
@@ -357,15 +391,19 @@ while (i < years) {
     i = i + 1;
     print(portfolioValue);
 }
+```
 
 Fórmula:
-	•	Crescimento Anual: portfolioValue = portfolioValue + (portfolioValue * annualReturnRate / 100)
+
+- Crescimento Anual: portfolioValue = portfolioValue + (portfolioValue * annualReturnRate / 100)
 
 Explicação:
 
-Simula o crescimento de um portfólio de ações ao longo de 10 anos com uma taxa de retorno anual de 7%, considerando o reinvestimento dos ganhos.
+- Simula o crescimento de um portfólio de ações ao longo de 10 anos com uma taxa de retorno anual de 7%, considerando o reinvestimento dos ganhos.
 
-Saída Esperada: `107000
+Saída Esperada: 
+
+- `107000
 114490
 122504
 131079
@@ -376,13 +414,15 @@ Saída Esperada: `107000
 183841
 196710`
 
-Como Executar
+---
+
+### Como Executar
 
 	1.	Salvar o Código: Certifique-se de que o arquivo main.py contém o código completo do interpretador fornecido.
 	2.	Criar Arquivos de Teste: Salve cada um dos exemplos de teste em arquivos separados com a extensão .my, por exemplo, teste1.my, teste2.my, etc.
 	3.	Executar o Interpretador: No terminal, execute o interpretador passando o arquivo de teste como argumento:
 
-python3 main.py teste1.my
+`python3 main.py teste1.my`
 
 	4.	Verificar a Saída: Compare a saída do interpretador com a saída esperada para cada teste.
 
