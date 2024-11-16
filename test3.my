@@ -4,8 +4,8 @@ account result;
 
 if (revenue > cost) {
     result = revenue - cost;
-    print(result);  // Profit
+    cashout(result);  // Profit
 } else {
     result = cost - revenue;
-    print(result);  // Loss
+    cashout(result);  // Loss
 }

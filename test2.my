@@ -7,4 +7,4 @@ while (i < years) {
     principal = principal + (principal * rate / 100);
     i = i + 1;
 }
-print(principal);
+cashout(principal);

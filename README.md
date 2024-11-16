@@ -14,7 +14,7 @@ A criação desta linguagem de programação tem como objetivo fornecer uma ferr
 - **Sintaxe Simples:** A linguagem possui uma sintaxe semelhante a linguagens como C e Java, facilitando a aprendizagem para aqueles familiarizados com programação básica.
 - **Palavras-chave Específicas:** Utiliza palavras-chave específicas para representar conceitos financeiros, como `account` para contas e valores monetários.
   - **`account:`** Utilizada para declarar variáveis que representam contas ou valores financeiros.
-  - **`print:`** Para exibir valores na saída padrão.
+  - **`cashout:`** Para exibir valores na saída padrão.
   - **`if, else, while:`** Controle de fluxo para criar lógica condicional e loops.
 - **Operações Aritméticas e Relacionais:**
   - Suporta operações como `+`, `-`, `*`, `/`.
@@ -40,7 +40,7 @@ account capitalInicial = 1000000;
 account despesas = 200000;
 account capitalLiquido;
 capitalLiquido = capitalInicial - despesas;
-print(capitalLiquido);
+cashout(capitalLiquido);
 ```
 
 Saída: `800000`
@@ -54,10 +54,10 @@ account resultado;
 
 if (receita > custo) {
     resultado = receita - custo;
-    print(resultado);  // Lucro
+    cashout(resultado);  // Lucro
 } else {
     resultado = custo - receita;
-    print(resultado);  // Prejuízo
+    cashout(resultado);  // Prejuízo
 } 
 ```
 Saída Esperada: `50000`
@@ -74,7 +74,7 @@ while (i < anos) {
     principal = principal + (principal * taxa / 100);
     i = i + 1;
 }
-print(principal);
+cashout(principal);
 ```
 Saída Esperada: `16288`
 
@@ -88,7 +88,7 @@ account initialCapital = 1000000;
 account expenses = 200000;
 account netCapital;
 netCapital = initialCapital - expenses;
-print(netCapital);
+cashout(netCapital);
 ```
  Fórmula:
 
@@ -117,7 +117,7 @@ while (i < years) {
     principal = principal + (principal * rate / 100);
     i = i + 1;
 }
-print(principal);
+cashout(principal);
 ```
 
 Explicação: 
@@ -157,10 +157,10 @@ account result;
 
 if (revenue > cost) {
     result = revenue - cost;
-    print(result);  // Lucro
+    cashout(result);  // Lucro
 } else {
     result = cost - revenue;
-    print(result);  // Prejuízo
+    cashout(result);  // Prejuízo
 }
 ```
 
@@ -191,10 +191,10 @@ account i = 1;
 while (i <= rounds) {
     account investment = i * 100000;  // Cada rodada aumenta o investimento
     totalInvestment = totalInvestment + investment;
-    print(totalInvestment);
+    cashout(totalInvestment);
     i = i + 1;
 }
-print(totalInvestment);
+cashout(totalInvestment);
 ```
 
 Fórmula:
@@ -226,7 +226,7 @@ account expectedSynergy = 200000;
 account mergedRevenue;
 
 mergedRevenue = companyARevenue + companyBRevenue + expectedSynergy;
-print(mergedRevenue);
+cashout(mergedRevenue);
 ```
 
 Fórmula:
@@ -255,10 +255,10 @@ account transferAmount = 200000;
 if (accountA >= transferAmount) {
     accountA = accountA - transferAmount;
     accountB = accountB + transferAmount;
-    print(accountA);
-    print(accountB);
+    cashout(accountA);
+    cashout(accountB);
 } else {
-    print(0);  // Transferência falhou por fundos insuficientes
+    cashout(0);  // Transferência falhou por fundos insuficientes
 }
 ```
 
@@ -287,7 +287,7 @@ account costOfInvestment = 100000;
 
 account roi;
 roi = (gainFromInvestment - costOfInvestment) * 100 / costOfInvestment;
-print(roi);
+cashout(roi);
 ```
 
 Fórmula:
@@ -319,7 +319,7 @@ account i = 0;
 while (i < years) {
     assetValue = assetValue - (assetValue * depreciationRate / 100);
     i = i + 1;
-    print(assetValue);
+    cashout(assetValue);
 }
 ```
 
@@ -352,7 +352,7 @@ account units = 0;
 while ((pricePerUnit * units) < (fixedCosts + variableCostPerUnit * units)) {
     units = units + 1;
 }
-print(units);
+cashout(units);
 ```
 
 Fórmula:￼
@@ -389,7 +389,7 @@ account i = 0;
 while (i < years) {
     portfolioValue = portfolioValue + (portfolioValue * annualReturnRate / 100);
     i = i + 1;
-    print(portfolioValue);
+    cashout(portfolioValue);
 }
 ```
 

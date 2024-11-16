@@ -6,4 +6,4 @@ account units = 0;
 while ((pricePerUnit * units) < (fixedCosts + variableCostPerUnit * units)) {
     units = units + 1;
 }
-print(units);
+cashout(units);

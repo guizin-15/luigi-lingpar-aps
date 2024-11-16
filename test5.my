@@ -4,4 +4,4 @@ account expectedSynergy = 200000;
 account mergedRevenue;
 
 mergedRevenue = companyARevenue + companyBRevenue + expectedSynergy;
-print(mergedRevenue);
+cashout(mergedRevenue);

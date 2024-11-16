@@ -5,7 +5,7 @@ account i = 1;
 while (i <= rounds) {
     account investment = i * 100000;  // Each round increases investment
     totalInvestment = totalInvestment + investment;
-    print(totalInvestment);
+    cashout(totalInvestment);
     i = i + 1;
 }
-print(totalInvestment);
+cashout(totalInvestment);

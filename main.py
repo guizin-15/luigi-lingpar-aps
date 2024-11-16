@@ -64,8 +64,8 @@ class Tokenizer:
                 self.next = Token('WHILE', id_str)
             elif id_str == 'transfer':
                 self.next = Token('TRANSFER', id_str)
-            elif id_str == 'print':
-                self.next = Token('PRINT', id_str)
+            elif id_str == 'cashout':
+                self.next = Token('CASHOUT', id_str)
             else:
                 self.next = Token('IDENTIFIER', id_str)
         elif char == '=':
@@ -223,7 +223,7 @@ class StatementsNode(Node):
         for stmt in self.statements:
             stmt.evaluate(symbol_table)
 
-class PrintNode(Node):
+class CashoutNode(Node):
     def __init__(self, expression):
         self.expression = expression
 
@@ -334,19 +334,19 @@ class Parser:
                 return AssignmentNode(name, expression)
             else:
                 raise ValueError("Expected '=' after identifier")
-        elif self.tokenizer.next.type == 'PRINT':
+        elif self.tokenizer.next.type == 'CASHOUT':
             self.tokenizer.select_next()
             if self.tokenizer.next.type != 'LPAREN':
-                raise ValueError("Expected '(' after 'print'")
+                raise ValueError("Expected '(' after 'cashout'")
             self.tokenizer.select_next()
             expression = self.parseRelExpression()
             if self.tokenizer.next.type != 'RPAREN':
-                raise ValueError("Expected ')' after 'print' expression")
+                raise ValueError("Expected ')' after 'cashout' expression")
             self.tokenizer.select_next()
             if self.tokenizer.next.type != 'SEMI':
-                raise ValueError("Expected ';' after 'print' statement")
+                raise ValueError("Expected ';' after 'cashout' statement")
             self.tokenizer.select_next()
-            return PrintNode(expression)
+            return CashoutNode(expression)
         elif self.tokenizer.next.type == 'IF':
             self.tokenizer.select_next()
             if self.tokenizer.next.type != 'LPAREN':

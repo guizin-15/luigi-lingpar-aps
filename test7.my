@@ -3,4 +3,4 @@ account costOfInvestment = 100000;
 
 account roi;
 roi = (gainFromInvestment - costOfInvestment) * 100 / costOfInvestment;
-print(roi);
+cashout(roi);

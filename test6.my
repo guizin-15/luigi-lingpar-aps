@@ -6,8 +6,8 @@ account transferAmount = 200000;
 if (accountA >= transferAmount) {
     accountA = accountA - transferAmount;
     accountB = accountB + transferAmount;
-    print(accountA);
-    print(accountB);
+    cashout(accountA);
+    cashout(accountB);
 } else {
-    print(0);  // Transfer failed due to insufficient funds
+    cashout(0);  // Transfer failed due to insufficient funds
 }

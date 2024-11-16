@@ -6,5 +6,5 @@ account i = 0;
 while (i < years) {
     portfolioValue = portfolioValue + (portfolioValue * annualReturnRate / 100);
     i = i + 1;
-    print(portfolioValue);
+    cashout(portfolioValue);
 }
