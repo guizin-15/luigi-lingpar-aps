@@ -1,0 +1,6 @@
+account gainFromInvestment = 150000;
+account costOfInvestment = 100000;
+
+account roi;
+roi = (gainFromInvestment - costOfInvestment) * 100 / costOfInvestment;
+print(roi);

@@ -1,0 +1,5 @@
+account initialCapital = 1000000;
+account expenses = 200000;
+account netCapital;
+netCapital = initialCapital - expenses;
+print(netCapital);

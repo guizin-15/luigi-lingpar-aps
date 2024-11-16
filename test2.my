@@ -1,0 +1,10 @@
+account principal = 10000;
+account rate = 5;  // Interest rate in percent
+account years = 10;
+account i = 0;
+
+while (i < years) {
+    principal = principal + (principal * rate / 100);
+    i = i + 1;
+}
+print(principal);

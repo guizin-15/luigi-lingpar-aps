@@ -1,0 +1,13 @@
+account accountA = 1000000;
+account accountB = 500000;
+account transferAmount = 200000;
+
+// Simulate transfer from accountA to accountB
+if (accountA >= transferAmount) {
+    accountA = accountA - transferAmount;
+    accountB = accountB + transferAmount;
+    print(accountA);
+    print(accountB);
+} else {
+    print(0);  // Transfer failed due to insufficient funds
+}

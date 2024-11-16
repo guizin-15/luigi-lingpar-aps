@@ -1,0 +1,10 @@
+account assetValue = 500000;
+account depreciationRate = 10;  // Percent per year
+account years = 5;
+account i = 0;
+
+while (i < years) {
+    assetValue = assetValue - (assetValue * depreciationRate / 100);
+    i = i + 1;
+    print(assetValue);
+}

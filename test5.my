@@ -1,0 +1,7 @@
+account companyARevenue = 500000;
+account companyBRevenue = 300000;
+account expectedSynergy = 200000;
+account mergedRevenue;
+
+mergedRevenue = companyARevenue + companyBRevenue + expectedSynergy;
+print(mergedRevenue);

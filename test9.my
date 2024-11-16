@@ -1,0 +1,9 @@
+account fixedCosts = 100000;
+account variableCostPerUnit = 50;
+account pricePerUnit = 100;
+account units = 0;
+
+while ((pricePerUnit * units) < (fixedCosts + variableCostPerUnit * units)) {
+    units = units + 1;
+}
+print(units);

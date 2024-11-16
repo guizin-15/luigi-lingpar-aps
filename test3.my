@@ -1,0 +1,11 @@
+account revenue = 750000;
+account cost = 800000;
+account result;
+
+if (revenue > cost) {
+    result = revenue - cost;
+    print(result);  // Profit
+} else {
+    result = cost - revenue;
+    print(result);  // Loss
+}

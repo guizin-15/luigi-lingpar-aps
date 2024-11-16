@@ -1,0 +1,10 @@
+account portfolioValue = 100000;
+account annualReturnRate = 7;  // Percent
+account years = 10;
+account i = 0;
+
+while (i < years) {
+    portfolioValue = portfolioValue + (portfolioValue * annualReturnRate / 100);
+    i = i + 1;
+    print(portfolioValue);
+}
